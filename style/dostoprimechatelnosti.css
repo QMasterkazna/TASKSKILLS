@@ -1,0 +1,87 @@
+/* dostoprimechatelnosti.css */
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline;
+	margin-right: 20px;
+}
+
+a {
+	position: relative;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px; /* Высота линии подчеркивания */
+	background-color: #000;
+	transition: width 0.3s ease, left 0.3s ease; /* Плавный переход ширины и положения */
+	transform-origin: center; /* Устанавливаем точку трансформации в центр */
+}
+
+a:hover::before {
+	width: 100%; /* Увеличиваем ширину линии при наведении на всю ширину ссылки */
+	left: 0; /* Смещаем линию влево, чтобы она выходила из центра */
+	background-color: rgba(185, 122, 122, 0.745);
+}
+
+section {
+	max-width: 800px;
+	margin: 80px auto;
+	overflow: hidden;
+	padding: 20px;
+}
+
+section h2 {
+	color: #333;
+}
+
+.landmark {
+	margin-bottom: 40px; /* Увеличил отступ между достопримечательностями */
+}
+
+.landmark h3 {
+	color: #333;
+}
+
+.landmark p {
+	line-height: 1.6;
+}
+
+.landmark ul {
+	margin-top: 10px;
+	padding: 0;
+	list-style: none;
+}
+
+.landmark img {
+	width: 100%;
+	height: auto;
+}
